@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <canvas id="canvas" width="400" height="300"></canvas>
+        <script type="text/javascript">
+            var canvas = document.getElementById('canvas');
+            var pen = canvas.getContext('2d');
+
+            pen.fillStyle="yellow";
+            pen.beginPath();
+            pen.arc(75,75,50,0, Math.PI * 2, true);
+            pen.fill();
+            pen.moveTo(110,75);
+            pen.arc(75,75,35,0, Math.PI, false);
+            pen.moveTo(75,75);
+            pen.srokeStyle="black";
+            pen.stroke();
+            pen.closePath();
+
+            pen.beginPath();
+            pen.arc(60,65,5,0, Math.PI * 2, true);
+            pen.fill();
+            pen.moveTo(95,65);
+            pen.arc(90,65,5,0, Math.PI * 2, true);
+            pen.moveTo(75,75);
+            pen.fill();
+            pen.stroke();
+            pen.closePath();
+
+        </script>
+    </body>
+</html>

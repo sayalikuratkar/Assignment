@@ -1,0 +1,31 @@
+button{
+    margin: 10px;
+    border-radius: 10px;
+    padding: 12px 15px 12px 15px;
+    min-width: 110px;
+    font-size: 15px;
+}
+@import "./btn-mixin";
+
+.primary{
+    @include btn-type(#8bc34a,#FFFFFF,1px,solid,#8bc34a)
+}
+
+.primary:not(:disabled):hover{
+    @include btn-type(#9dce5d,#FFFFFF,1px,solid,#9dce5d)
+}
+
+.primary:disabled{
+    @include btn-type(#eeeeee,#999999,1px,solid,#eeeeee)
+}
+
+.secondary{
+    @include btn-type(#FFFFFF,#2095f2,1px,solid,#2095f2);
+}
+
+.secondary:not(:disabled):hover{
+    @include btn-type(#2095f2,#FFFFFF,1px,solid,#2095f2);
+}
+.secondary:disabled{
+    @include btn-type(#ffffff,#999999,1px,solid,#cccccc);
+}

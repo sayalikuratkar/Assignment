@@ -1,0 +1,16 @@
+table,tr,td
+ {
+    border: 1px solid;
+}
+
+#favWriter {
+    display: none;
+}
+
+input:invalid {
+    border: 2px solid black;
+}
+
+input:valid {
+    border: 2px solid black;
+}

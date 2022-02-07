@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #getData {
+                width: 350px;
+                 height: 250px;
+                  padding: 10px;
+                  border:1px solid red;
+            }
+        </style>
+        <script>
+            function allowDrop(ev){
+                ev.preventDefault();
+            }
+
+            function drag(ev){
+                ev.dataTransfer.setData("text", ev.target.id);
+            }
+            function drop(ev){
+                ev.preventDefault();
+                var data = ev.dataTransfer.getData("text");
+                ev.target.appendChild(document.getElementById(data));
+            }
+        </script>
+     </head>
+    <body>
+         <h3>Drag the image</h3>
+        <div id= "getData"
+            ondrop="drop(ev)"
+             ondragover="allowDrop(ev)">
+        </div>
+         <br>
+        <img id="data"
+            src="flower.png"
+            Sdraggable="true"
+            ondragstart="drag(ev)"
+            width="300"
+            height="250">
+    </body>
+</html>
+   

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>Count number: <output id="result"></output></p>
+        <button onclick="start()">Start</button>
+        <button onclick="stop()">Stop</button>
+
+        <script type="text/javascript">
+            var x;
+            function start(){
+                if(typeof(Worker)!=="undefined"){
+                    if(typeof(x) == "undefined"){
+                        x = new Worker("../js/assignment4.js");
+                        
+                    }
+                    x.onmessage=function(event){
+                        document.getElementById("result").innerHTML = event.data;
+
+                    };
+                }else{
+                    document.getElementById("result").innerHTML="sorry! no web worker support";
+                }
+            }
+            function stop(){
+                x.terminate();
+                x = undefined
+            }             
+        </script>
+    </body>
+</html>

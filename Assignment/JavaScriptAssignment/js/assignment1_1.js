@@ -1,0 +1,1 @@
+document.write("Welcome to javascript - the scripting language of the web");

@@ -1,0 +1,7 @@
+@mixin btn-type($bg-color,$clr,$btn-width,$btn-style,$btn-clr){
+    background-color: $bg-color;
+    color: $clr;
+    border-width: $btn-width;
+    border-style: $btn-style;
+    border-color: $btn-clr;
+}
